@@ -2,6 +2,8 @@
 
 import Header from "@/containers/Header";
 import Footer from "@/containers/Footer";
+import React from "react";
+import { StyledLayout } from "@/styles";
 
 interface Props {
   children?: React.ReactNode;
@@ -9,11 +11,11 @@ interface Props {
 
 const Layout: React.FC<Props> = ({ children }) => {
   return (
-    <div>
+    <StyledLayout>
       <Header />
         {children}
       <Footer />
-    </div>
+    </StyledLayout>
   );
 };
 export default Layout;

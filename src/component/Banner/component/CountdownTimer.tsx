@@ -33,7 +33,7 @@ const CountdownTimer = () => {
   if (!timeLeft) return null
 
   return (
-    <div className="flex flex-col items-center justify-center w-full bg-gradient-to-r from-blue-900 to-purple-700 text-white">
+    <div className="flex flex-col items-center justify-center w-full  text-white">
       <Typography variant="h3" className="font-bold mb-6">
         We're Getting Ready
       </Typography>

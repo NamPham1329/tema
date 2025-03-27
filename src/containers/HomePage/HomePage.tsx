@@ -4,6 +4,7 @@ import Ourgames from "@/component/Ourgame";
 import OurPartner from "@/component/OurPartner";
 import Pinmap from "@/component/Pinmap";
 import { Grid } from "@mui/material";
+import React from "react";
 import { Fragment } from "react";
 
 const HomePage = () => {
