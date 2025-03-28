@@ -4,10 +4,11 @@ import InputAdornments from "@/small-component/Input";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { BannerStyled } from "../styles";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState(null);
-
+  const t = useTranslations('common')
   useEffect(() => {
     const targetDate = new Date();
     targetDate.setDate(targetDate.getDate() + 30); // Đếm ngược 30 ngày
@@ -40,39 +41,39 @@ const CountdownTimer = () => {
     <div style={{ position: 'relative' }} className="w-screen">
       <BannerStyled className="flex flex-col items-center justify-center w-full  text-white">
         <Typography variant="h3" className="font-bold mb-6" sx={{ fontSize: '80px', fontWeight: '900', lineHeight: '120px', fontFamily: 'Playfair Display' }}>
-          We're Getting Ready
+          {t('we_getting_ready')}
         </Typography>
 
         <Card className="card bg-white text-black shadow-lg">
           <CardContent className="timer_componennt flex text-center text-2xl font-bold">
             <div>
               <span>{timeLeft.days}</span>
-              <Typography className="subtitle" variant="subtitle1">Days</Typography>
+              <Typography className="subtitle" variant="subtitle1">{t('days')}</Typography>
             </div>
             <span>:</span>
             <div>
               <span>{timeLeft.hours}</span>
-              <Typography className="subtitle" variant="subtitle1">Hours</Typography>
+              <Typography className="subtitle" variant="subtitle1">{t('hours')}</Typography>
             </div>
             <span>:</span>
             <div>
               <span>{timeLeft.minutes}</span>
-              <Typography className="subtitle" variant="subtitle1">Minutes</Typography>
+              <Typography className="subtitle" variant="subtitle1">{t('minutes')}</Typography>
             </div>
             <span>:</span>
             <div>
               <span>{timeLeft.seconds}</span>
-              <Typography className="subtitle" variant="subtitle1">Seconds</Typography>
+              <Typography className="subtitle" variant="subtitle1">{t('seconds')}</Typography>
             </div>
           </CardContent>
         </Card>
         <div className="send_mail">
           <Typography variant="body1" className="description mt-6 text-center">
-            We will be back to something amazing. Get the latest updates about our games. Please sign up to our newsletter.
+            {t('we_will_back')}
           </Typography>
           <InputAdornments
             endAdornment={<ArrowForwardIcon />}
-            placeholder={"Enter your email"}
+            placeholder={t('enter_email')}
           />
         </div>
       </BannerStyled>

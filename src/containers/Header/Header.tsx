@@ -1,3 +1,4 @@
+import SelectLanguage from "@/small-component/SelectLanguage";
 import { Typography } from "@mui/material";
 import { Box, Grid } from "@mui/material";
 import { useTranslations } from "next-intl";
@@ -66,6 +67,7 @@ const Header = () => {
                 {page}
               </Typography>
             ))}
+            <SelectLanguage />
           </Box>
         </Grid>
       </Grid>

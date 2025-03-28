@@ -1,6 +1,7 @@
 import CardItem from "@/small-component/CardItem";
 import { Grid, Typography } from "@mui/material";
 import { OurgameStyled } from "./style";
+import { useTranslations } from "next-intl";
 
 const games = [
   { title: "E-Space", image: "/images/card/Bitmap.svg" },
@@ -18,12 +19,13 @@ const games = [
 ];
 
 const Ourgames = () => {
+  const t = useTranslations('our_games')
   return (
     <OurgameStyled>
       <div className="content">
-        <h2>Our Games</h2>
+        <h2>{t('title')}</h2>
         <Typography variant="body1">
-          As a pioneer of mobile app gamification, we take pride in originality and individuality, providing global players with state-of-the-art games that feature splendid storylines, sensational sound effects and magnificent animation that never cease to impress.
+        {t('our_games_des')}
         </Typography>
       </div>
       <Grid container spacing={3}>
