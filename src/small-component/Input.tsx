@@ -1,28 +1,23 @@
+"use client"
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import OutlinedInput from '@mui/material/OutlinedInput';
-import InputAdornment from '@mui/material/InputAdornment';
-import FormHelperText from '@mui/material/FormHelperText';
-import FormControl from '@mui/material/FormControl';
+import Paper from '@mui/material/Paper';
+import InputBase from '@mui/material/InputBase';
+import IconButton from '@mui/material/IconButton';
 
-export default function InputAdornments({ endAdornment, label, placeholder}) {
+export default function InputAdornments({ endAdornment, placeholder}) {
 
   return (
-    <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
-      <div>
-        <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined">
-          <OutlinedInput
-            id="outlined-adornment"
-            endAdornment={<InputAdornment position="end">{endAdornment}</InputAdornment>}
-            aria-describedby="outlined-weight-helper-text"
-            inputProps={{
-              'aria-label': 'weight',
-            }}
-            placeholder={placeholder ?? ''}
-          />
-          <FormHelperText id="outlined-weight-helper-text">{label || ''}</FormHelperText>
-        </FormControl>
-      </div>
-    </Box>
+    <Paper
+      component="form"
+      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center' }}
+    >
+      <InputBase
+        sx={{ ml: 1, flex: 1 }}
+        placeholder={placeholder || ''}
+      />
+      <IconButton type="button" sx={{ p: '10px' }} aria-label="search">
+        {endAdornment || ''}
+      </IconButton>
+    </Paper>
   );
 }

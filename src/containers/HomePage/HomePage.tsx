@@ -10,13 +10,13 @@ import { Fragment } from "react";
 const HomePage = () => {
   return (
     <Fragment>
-      <Grid className="banner bg-cyan-500 w-full" container>
+      <Grid className="banner w-screen" container>
         <Banner />
       </Grid>
-      <Grid container className="about_us">
+      <Grid container className="about_us" justifyContent={'center'}>
         <AboutUs />
       </Grid>
-      <Grid container className="pin_map">
+      <Grid container className="pin_map" justifyContent={'center'}>
         <Pinmap />
       </Grid>
       <Grid container className="our_games">

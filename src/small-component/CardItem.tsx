@@ -12,11 +12,11 @@ const CardItem = ({ game }) => {
 
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
 
-      <CardContent className="absolute bottom-4 left-4 right-4 text-white">
-        <Typography variant="h5" className="font-bold">
+      <CardContent className="game absolute bottom-4 left-4 right-4 text-white">
+        <Typography variant="h5" className="font-bold name">
           {game.title}
         </Typography>
-        <Typography variant="body2" className="text-gray-300">
+        <Typography variant="body2" className=" description text-gray-300">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor.
         </Typography>

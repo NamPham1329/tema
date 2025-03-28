@@ -1,4 +1,6 @@
 import GameSlider from "@/small-component/Slider";
+import { OurPartnerStyled } from "./style";
+import { Typography } from "@mui/material";
 
 const OurPartner = () => { 
     const listItem = [
@@ -16,9 +18,12 @@ const OurPartner = () => {
     { title: "Egypt Game", image: "/images/card/Bitmap (11).svg" },
   ]; 
   return (
-    <div>
-      <GameSlider listItem={listItem}/>
-    </div>
+    <OurPartnerStyled>
+      <div className="title">
+        <Typography variant="h2">Our Partner</Typography>
+      </div>
+      <GameSlider />
+    </OurPartnerStyled>
   );
 }
 export default OurPartner;

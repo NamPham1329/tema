@@ -4,6 +4,7 @@ import Header from "@/containers/Header";
 import Footer from "@/containers/Footer";
 import React from "react";
 import { StyledLayout } from "@/styles";
+import ScrollButton from "@/small-component/ScrollButton";
 
 interface Props {
   children?: React.ReactNode;
@@ -15,6 +16,7 @@ const Layout: React.FC<Props> = ({ children }) => {
       <Header />
         {children}
       <Footer />
+      <ScrollButton />
     </StyledLayout>
   );
 };
