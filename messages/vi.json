@@ -1,0 +1,36 @@
+{
+    "common": {
+        "about_us": "Về Chúng Tôi",
+        "games": "Trò Chơi",
+        "partner": "Đối Tác",
+        "contact_us": "Liên Hệ",
+        "we_getting_ready": "Chúng tôi đang chuẩn bị",
+        "days": "Ngày",
+        "hours": "Giờ",
+        "minutes": "Phút",
+        "second": "Giây",
+        "we_will_back": "Chúng tôi sẽ quay lại với điều gì đó tuyệt vời. Nhận các cập nhật mới nhất về trò chơi của chúng tôi. Vui lòng đăng ký nhận bản tin của chúng tôi.",
+        "enter_email": "Nhập email của bạn",
+        "address": "Địa Chỉ",
+        "subscribe": "Đăng Ký",
+        "subscribe_des": "Đăng ký nhận bản tin của chúng tôi để là người đầu tiên biết về các cập nhật mới nhất"
+    },
+    "about_us": {
+        "description": "Duyệt qua bộ sưu tập trò chơi trực tuyến miễn phí của chúng tôi và tận hưởng thời gian tuyệt vời mà không cần rời khỏi trang web! Tùy chọn Trò Chơi Trẻ Em của chúng tôi cũng bao gồm các bài đánh giá trò chơi, mẹo chơi chi tiết, hướng dẫn, và nhiều hơn nữa. Chúng tôi cũng có các tệp tải xuống miễn phí độc quyền, video và bài viết. Etech đánh giá các trò chơi phổ biến nhất dành cho trẻ em từ tất cả các nền tảng chơi game phổ biến, vì vậy bạn không cần tìm kiếm niềm vui ở đâu khác trên Internet. Khám phá một thế giới trò chơi hoàn toàn mới tại Etech.",
+        "users": "Người Dùng",
+        "games": "Trò Chơi",
+        "hour": "Giờ",
+        "hour_des": "Truy cập 24/7 giúp đảm bảo hoạt động của doanh nghiệp diễn ra suôn sẻ suốt cả năm.",
+        "design": "Thiết Kế",
+        "design_des": "Kết hợp các thế giới tưởng tượng, cơ chế chơi độc đáo và lối chơi chưa từng có, trò chơi của chúng tôi vượt qua giới hạn của thế giới ảo bằng cách mang đến trải nghiệm sáng tạo.",
+        "team": "Đội Ngũ",
+        "team_des": "Etech là một studio quốc tế từng đoạt giải thưởng, bao gồm các nhà thiết kế, nghệ sĩ, họa sĩ hoạt hình và nhà sản xuất tạo ra nội dung cho các thương hiệu lớn nhất trong lĩnh vực phim và trò chơi điện tử."
+    },
+    "our_games": {
+        "title": "Trò Chơi Của Chúng Tôi",
+        "our_games_des": "Là người tiên phong trong việc trò chơi hóa ứng dụng di động, chúng tôi tự hào về tính độc đáo và cá tính, cung cấp cho người chơi toàn cầu những trò chơi hiện đại với cốt truyện hấp dẫn, hiệu ứng âm thanh sống động và hình ảnh tuyệt đẹp không ngừng gây ấn tượng."
+    },
+    "partners": {
+        "title": "Đối Tác Của Chúng Tôi"
+    }
+}

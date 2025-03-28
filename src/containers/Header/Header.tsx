@@ -1,11 +1,15 @@
 import { Typography } from "@mui/material";
 import { Box, Grid } from "@mui/material";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
-export const pages = ["About Us", "Games", "Partner", "Contact Us"];
+
 const Header = () => {
+  const t = useTranslations('common')
   const [scrolled, setScrolled] = useState(false);
+
+  const pages = [t('about_us'), t('games'), t('partner'), t('contact_us')];
 
   useEffect(() => {
     const handleScroll = () => {
