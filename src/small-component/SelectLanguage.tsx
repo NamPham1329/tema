@@ -12,7 +12,7 @@ const languages = [
   { code: "vi", label: "Vietnamese", flag: "/images/vietnam.svg" },
 ];
 
-const StyledMenu = styled(Menu)(({ theme }) => ({
+const StyledMenu = styled(Menu)(() => ({
   "& .MuiPaper-root": {
     borderRadius: 8,
     minWidth: 150,
