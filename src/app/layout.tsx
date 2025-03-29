@@ -22,9 +22,9 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} w-screen h-screen bg-white`}>
-        <StyledComponentsRegistry>
-          <NextIntlClientProvider>{children}</NextIntlClientProvider>
-        </StyledComponentsRegistry>
+        <NextIntlClientProvider>
+          <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

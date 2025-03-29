@@ -5,7 +5,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   compiler: {
-    styledComponents: true, // Hỗ trợ styled-components mà không cần Babel
+    styledComponents: true,
   },
 };
 
