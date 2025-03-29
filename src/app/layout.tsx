@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React from "react";
 import { NextIntlClientProvider } from "next-intl";
+import StyledComponentsRegistry from "./styled-registry";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,9 +22,9 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} w-screen h-screen bg-white`}>
-        <NextIntlClientProvider>
-        {children}
-        </NextIntlClientProvider>
+        <StyledComponentsRegistry>
+          <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        </StyledComponentsRegistry>
       </body>
     </html>
   );
