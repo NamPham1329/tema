@@ -1,10 +1,12 @@
-const createNextIntlPlugin = require("next-intl/plugin")
+import createNextIntlPlugin from "next-intl/plugin";
 
 const withNextIntl = createNextIntlPlugin()
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  compiler: {
+    styledComponents: true, // Hỗ trợ styled-components mà không cần Babel
+  },
 };
 
 export default withNextIntl(nextConfig);
