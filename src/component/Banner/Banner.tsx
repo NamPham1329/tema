@@ -44,7 +44,6 @@ const Banner = () => {
             height={860}
           />
         </div>
-        {/* <CountdownTimer /> */}
       </div>
     </StyledBanner>
   );
