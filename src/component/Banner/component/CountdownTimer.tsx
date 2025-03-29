@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Card, CardContent, Typography } from "@mui/material";
-import InputAdornments from "@/small-component/Input";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { BannerStyled } from "../styles";
+import { BannerStyled, TitleBanner } from "../styles";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import InputV2 from "@/small-component/InputV2";
 
 const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState(null);
-  const t = useTranslations('common')
+  const t = useTranslations("common");
   useEffect(() => {
     const targetDate = new Date();
     targetDate.setDate(targetDate.getDate() + 30); // Đếm ngược 30 ngày
@@ -27,61 +26,87 @@ const CountdownTimer = () => {
       };
     };
 
-    setTimeLeft(calculateTimeLeft())
+    setTimeLeft(calculateTimeLeft());
     const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft())
-    }, 1000)
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
 
-    return () => clearInterval(timer)
-  }, [])
+    return () => clearInterval(timer);
+  }, []);
 
-  if (!timeLeft) return null
+  if (!timeLeft) return null;
 
   return (
-    <div style={{ position: 'relative' }} className="w-screen">
-      <BannerStyled className="flex flex-col items-center justify-center w-full  text-white">
-        <Typography variant="h3" className="font-bold mb-6" sx={{ fontSize: '80px', fontWeight: '900', lineHeight: '120px', fontFamily: 'Playfair Display' }}>
-          {t('we_getting_ready')}
+    <div style={{ position: "relative" }} className="w-screen">
+      <TitleBanner>
+        <Typography
+          variant="h3"
+          className="font-bold mb-6"
+          sx={{
+            fontSize: "80px",
+            fontWeight: "900",
+            lineHeight: "120px",
+            fontFamily: "Playfair Display",
+          }}
+        >
+          {t("we_getting_ready")}
         </Typography>
-
+      </TitleBanner>
+      <BannerStyled className="flex flex-col items-center justify-center w-full  text-white">
         <Card className="card bg-white text-black shadow-lg">
           <CardContent className="timer_componennt flex text-center text-2xl font-bold">
             <div>
               <span>{timeLeft.days}</span>
-              <Typography className="subtitle" variant="subtitle1">{t('days')}</Typography>
+              <Typography className="subtitle" variant="subtitle1">
+                {t("days")}
+              </Typography>
             </div>
             <span>:</span>
             <div>
               <span>{timeLeft.hours}</span>
-              <Typography className="subtitle" variant="subtitle1">{t('hours')}</Typography>
+              <Typography className="subtitle" variant="subtitle1">
+                {t("hours")}
+              </Typography>
             </div>
             <span>:</span>
             <div>
               <span>{timeLeft.minutes}</span>
-              <Typography className="subtitle" variant="subtitle1">{t('minutes')}</Typography>
+              <Typography className="subtitle" variant="subtitle1">
+                {t("minutes")}
+              </Typography>
             </div>
             <span>:</span>
             <div>
               <span>{timeLeft.seconds}</span>
-              <Typography className="subtitle" variant="subtitle1">{t('seconds')}</Typography>
+              <Typography className="subtitle" variant="subtitle1">
+                {t("seconds")}
+              </Typography>
             </div>
           </CardContent>
         </Card>
         <div className="send_mail">
-          <Typography variant="body1" className="description mt-6 text-center">
-            {t('we_will_back')}
+          <Typography
+            variant="body1"
+            className="description mt-6 text-center"
+            sx={{ mb: 4 }}
+          >
+            {t("we_will_back")}
           </Typography>
-          <InputAdornments
-            endAdornment={<ArrowForwardIcon />}
-            placeholder={t('enter_email')}
-          />
+          <InputV2 />
         </div>
       </BannerStyled>
-      <div className="image" style={{ width:'fit-content', position: 'absolute', bottom: '0' }}>
-          <Image src="/images/ong tien 1.svg" alt="banner" width={860} height={860} />
-        </div>
+      <div
+        className="image"
+        style={{ width: "fit-content", position: "absolute", bottom: "-140px" }}
+      >
+        <Image
+          src="/images/ong tien 1.svg"
+          alt="banner"
+          width={860}
+          height={860}
+        />
+      </div>
     </div>
-
   );
 };
 

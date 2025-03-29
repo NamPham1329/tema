@@ -57,4 +57,30 @@ export const OurgameStyled = styled.div`
             vertical-align: bottom;
         }
     }
+    @media only screen and (max-width: 425px) {
+        margin: 0;
+        padding: 0 1rem;
+        & .content {
+            margin-bottom: 40px;
+            & > h2 {
+                font-size: 40px;
+                line-height: 50px;
+                letter-spacing: 0.6px;
+                margin-bottom: 1rem;
+            }
+        }
+        & .game {
+            padding: 0;
+            & .name {
+                font-size: 24px;
+                line-height: 30px;
+                letter-spacing: 0px;
+            }
+            & .description {
+                font-size: 12px;
+                line-height: 15px;
+                letter-spacing: 0.9px;
+            }
+        }
+      }
 `

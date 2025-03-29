@@ -3,7 +3,20 @@
 import { useEffect, useState } from "react";
 import { Fab, Box } from "@mui/material";
 import { KeyboardArrowDown, KeyboardArrowUp } from "@mui/icons-material";
+import styled from "styled-components";
 
+const StyledIconScroll = styled(Box)`
+  & .MuiFab-circular {
+    width: 66.67px;
+    height: 66.67px;
+    background: white;
+    & svg {
+      width: 40px;
+      height: 40px;
+      color: #000000;
+    }
+  }
+`
 export default function ScrollButton() {
   const [atBottom, setAtBottom] = useState(false);
 
@@ -11,7 +24,6 @@ export default function ScrollButton() {
     const handleScroll = () => {
       const isBottom =
         window.innerHeight + window.scrollY >= document.body.scrollHeight - 10;
-        console.log(isBottom, 'isBottom123')
       setAtBottom(isBottom);
     };
 
@@ -28,7 +40,7 @@ export default function ScrollButton() {
   };
 
   return (
-    <Box
+    <StyledIconScroll
       sx={{
         position: "fixed",
         bottom: 20,
@@ -37,8 +49,8 @@ export default function ScrollButton() {
       }}
     >
       <Fab color="primary" onClick={scrollPage}>
-        {atBottom ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
+        {atBottom ? <KeyboardArrowUp sx={{ width: '30px' }}/> : <KeyboardArrowDown sx={{ width: '30px' }} />}
       </Fab>
-    </Box>
+    </StyledIconScroll>
   );
 }

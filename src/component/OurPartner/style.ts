@@ -6,8 +6,9 @@ export const OurPartnerStyled = styled.div`
     margin: auto;    
     margin-top: 366px;
     margin-bottom: 120px;
-    background-color:rgb(134, 15, 15);
-    width: 90%;
+    background-color: #F6F6F6;
+    width: 100%;
+    padding: 120px;
     & h2 {
         font-family: Playfair Display;
         font-weight: 900;
@@ -16,7 +17,6 @@ export const OurPartnerStyled = styled.div`
         letter-spacing: 3.6px;
         text-align: center;
         vertical-align: middle;
-        margin-top: 120px;
         margin-bottom: 80px;
     }
 
@@ -28,12 +28,14 @@ export const OurPartnerStyled = styled.div`
             margin-right: 40px;
         }
     }
-
-    & .slick-prev:before {
-        color: "#757575";
-        display:
-    }
-    .slick-prev:before, .slick-next:before {
-        // font-size: 40px;
+    @media only screen and (max-width: 425px) {
+        margin-top: 84px;
+        padding: 40px 0;
+        & h2 {
+            font-size: 40px;
+            line-height: 50px;
+            letter-spacing: 0.6px;
+            margin-bottom: 40px;
+        }
     }
 `

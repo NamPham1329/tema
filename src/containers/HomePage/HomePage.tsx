@@ -13,16 +13,16 @@ const HomePage = () => {
       <Grid className="banner w-screen" container>
         <Banner />
       </Grid>
-      <Grid container className="about_us" justifyContent={'center'}>
+      <Grid container className="about_us w-screen" justifyContent={'center'}>
         <AboutUs />
       </Grid>
-      <Grid container className="pin_map" justifyContent={'center'}>
+      <Grid container className="pin_map w-screen" justifyContent={'center'}>
         <Pinmap />
       </Grid>
-      <Grid container className="our_games">
+      <Grid container className="our_games w-screen">
         <Ourgames />
       </Grid>
-      <Grid container className="our_partner">
+      <Grid container className="our_partner w-screen">
         <OurPartner />
       </Grid>
     </Fragment>

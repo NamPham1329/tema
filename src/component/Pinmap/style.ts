@@ -33,5 +33,12 @@ export const PinmapStyled = styled.div`
         z-index: 1;
         height: 428px;
      }
+      @media only screen and (max-width: 425px) {
+        padding: 0 1rem;
+        margin-bottom: 48px;
+        & .map {
+          height: auto;
+        }
+      }
 }
 `

@@ -1,5 +1,18 @@
 import styled from "styled-components";
 
+export const TitleBanner = styled.div`
+    text-align: center;
+    color: white;
+    @media only screen and (max-width: 375px) {
+    & h3 {
+        width: 99%;
+        font-size: 40px;
+        letter-spacing: 0.6px;
+        line-height: 50px;
+        text-align: center;
+        }
+    }
+`
 export const BannerStyled = styled.div`
     font-family: 'Playfair Display', serif;
     font-weight: 900;
@@ -12,7 +25,8 @@ export const BannerStyled = styled.div`
     z-index: 1;
     backdrop-filter: blur(4px);
     & .card {
-    border-radius: 21px;
+        border-radius: 21px;
+        backdrop-filter: blur(4px);
     }
     & .timer_componennt {
         padding: 26px 40px;
@@ -55,4 +69,52 @@ export const BannerStyled = styled.div`
                 margin-top: 32px;
              }
         }
+    @media only screen and (max-width: 375px) {
+        padding: 0 1rem;
+        & .card {
+            width: 100%;
+            margin-top: 38px;
+            & span {
+                font-size: 36px;
+                line-height; 45px;
+            }
+            & .timer_componennt {
+                padding: 24px;
+                display: flex;
+                justify-content: space-between;
+            }
+            & .timer_componennt > div, & span {
+                margin-right: 0px;
+            }
+        }
+
+        & .send_mail {
+            width: 100%;
+            margin-top: 40px;
+            & > p {
+                margin-bottom: 1rem;
+                font-size: 12px;
+                line-height: 15px
+            }
+        }
+    }
+`
+
+export const TimeStyled = styled.div`
+    background-color: white;
+    width: 38%;
+    margin: auto;
+    color: black;
+    border-radius: 12px;
+    padding: 12px;
+    padding: 26px 40px;
+    border-radius: 21px;
+    & .time {
+        font-size: 60px;
+        line-height: 64px;
+        letter-spacing: 4.8px;
+        horizontal-align: center;
+        font-family: 'Playfair Display';
+        font-weight: 700;
+    }
 `

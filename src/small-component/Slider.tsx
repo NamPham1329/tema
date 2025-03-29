@@ -7,15 +7,26 @@ import React from "react";
 const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
 export default function GameSlider() {
-
   const settings = {
+    // infinite: true,
+    // speed: 500,
+    // // slidesToShow: 5,
+    // slidesToScroll: 1,
+    // // autoplay: true,
+    // autoplaySpeed: 5000,
+    // arrows: true,
+
+    // centerMode: true,
+    // slidesToShow: 1,
+
+    className: "center",
+    centerMode: true,
     infinite: true,
+    centerPadding: "60px",
+    slidesToShow: 1,
     speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    arrows: true,
+    rows: 1,
+    // slidesPerRow: 2
   };
 
   return (

@@ -26,7 +26,21 @@ export const AboutUsStyled = styled.div`
             margin-top: 40px;
             margin-bottom: 80px;
         }
-        & .total_users {
+        & .total_users, & .total_games {
+            & .number-container {
+                font-family: Montserrat;
+                font-weight: 700;
+                font-size: 80px;
+                line-height: 100%;
+                letter-spacing: -1px;
+                color: #079BEE;
+                display: flex;
+                align-items: baseline;
+                & .small-text {
+                    font-size: 30px; /* Cỡ chữ nhỏ hơn */
+                    vertical-align: baseline; /* Căn theo baseline */
+                } 
+            }
             margin-bottom: 40px;
         }
         & h4 {
@@ -51,7 +65,6 @@ export const AboutUsStyled = styled.div`
     }
     
     & .services_info_box {
-        // max-width: 560px;
         & .services_info {
             padding: 113px 75px;
             & > div:not(:last-child) {
@@ -64,7 +77,7 @@ export const AboutUsStyled = styled.div`
             align-items: flex-start;
             padding-top: 5px;
             & > div {
-                background-color: #ffffff;
+                background-color: #E3FCFF;
                 padding: 8.5px;
                 border-radius: 50%;
             }
@@ -85,6 +98,39 @@ export const AboutUsStyled = styled.div`
                 letter-spacing: 0px;
                 color: #757575;
             }
+        }
+    }
+
+    @media only screen and (max-width: 425px) {
+        margin-top: 250px;
+        & > div {
+            gap: 0;
+        }
+        & .about_us_info {
+            padding: 0 1rem;
+            & .about_us {
+                font-size: 40px;
+                line-height: 50px;
+            }
+            & .des {
+                margin-top: 16px;
+                font-size: 14px;
+                margin-bottom: 40px;
+            }
+            }
+            & .statistical {
+                display: flex;
+                & .total_games, & .number-container {
+                    font-size: 44px !important;
+                }
+            }
+
+            & .total_games > h5 {
+                margin-top: 8px;
+            }
+        }
+        & .services_info {
+            padding: 40px 1rem !important;
         }
     }
     
