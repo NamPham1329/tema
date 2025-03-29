@@ -34,14 +34,14 @@ const StyledMenu = styled(Menu)(() => ({
 
 const LanguageSwitcher = () => {
   const router = useRouter();
-  const [anchorEl, setAnchorEl] = useState(null);
+  const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
   const [selectedLang, setSelectedLang] = useState(languages[0]);
 
-  const handleClick = (event) => {
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleClose = (lang) => {
+  const handleClose = (lang: { code: string; label: string; flag: string } | null) => {
     if (lang) setSelectedLang(lang);
     document.cookie = `locale=${lang?.code};`;
     router.refresh();
@@ -59,7 +59,7 @@ const LanguageSwitcher = () => {
     } else {
       const browserLocale = navigator.language.slice(0, 2);
       const lang = languages.filter((item) => item?.code === browserLocale);
-      setSelectedLang(lang?.code);
+      setSelectedLang(lang[0]);
       document.cookie = `locale=${browserLocale};`;
       router.refresh();
     }

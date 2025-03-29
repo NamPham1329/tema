@@ -52,7 +52,11 @@ const MenuMobileStyled = styled(Box)`
     text-transform: uppercase;
   }
 `;
-const MobileHeader = ({ scrolled }) => {
+interface MobileHeaderProps {
+  scrolled: boolean;
+}
+
+const MobileHeader = ({ scrolled }: MobileHeaderProps) => {
   const t = useTranslations();
   const [openMenu, setOpenMenu] = useState(false);
 
