@@ -4,7 +4,12 @@ import Paper from '@mui/material/Paper';
 import InputBase from '@mui/material/InputBase';
 import IconButton from '@mui/material/IconButton';
 
-export default function InputAdornments({ endAdornment, placeholder}) {
+interface InputAdornmentsProps {
+  endAdornment?: React.ReactNode;
+  placeholder?: string;
+}
+
+export default function InputAdornments({ endAdornment, placeholder }: InputAdornmentsProps) {
 
   return (
     <Paper

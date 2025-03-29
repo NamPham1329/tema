@@ -7,9 +7,9 @@ const CustomInput = styled(TextField)`
   & .MuiOutlinedInput-root {
     border-radius: 8px;
     border: ${(props) =>
-      props.$variant === "outlined" ? "1px solid white" : "none"};
+      props.variant === "outlined" ? "1px solid white" : "none"};
     background: ${(props) =>
-      props.$variant === "filled" ? "white" : "transparent"};
+      props.variant === "filled" ? "white" : "transparent"};
 
     "&:hover fieldset": {
       borderColor: "transparent",
@@ -20,10 +20,10 @@ const CustomInput = styled(TextField)`
     },
 
   & .MuiInputBase-input {
-    color: ${(props) => (props.$variant === "filled" ? "black" : "white")};
+    color: ${(props) => (props.variant === "filled" ? "black" : "white")};
     &::placeholder {
       color: ${(props) =>
-        props.$variant === "filled" ? "#999" : "rgba(255, 255, 255, 0.6)"};
+        props.variant === "filled" ? "#999" : "rgba(255, 255, 255, 0.6)"};
     }
     &::placeholder {
         font-family: Montserrat;
@@ -31,7 +31,7 @@ const CustomInput = styled(TextField)`
         font-size: 14px;
         line-height: 140%;
         letter-spacing: 0px;
-        color: ${(props) => (props.$variant === "filled" ? "black" : "white")};
+        color: ${(props) => (props.variant === "filled" ? "black" : "white")};
     }
   }
 
@@ -40,12 +40,12 @@ const CustomInput = styled(TextField)`
   }
 `;
 
-const InputComponent = ({ variant = "filled" }) => {
+const InputComponent = ({ variant = "filled" }: { variant?: "filled" | "outlined" }) => {
   return (
     <CustomInput
       fullWidth
       placeholder="Enter your email"
-      $variant={variant}
+      variant={variant}
       InputProps={{
         endAdornment: (
           <InputAdornment position="end">

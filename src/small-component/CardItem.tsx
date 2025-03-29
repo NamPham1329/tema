@@ -1,6 +1,11 @@
 import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 
-const CardItem = ({ game }) => {
+interface Game {
+  image: string;
+  title: string;
+}
+
+const CardItem = ({ game }: { game: Game }) => {
   return (
     <Card className="relative rounded-xl overflow-hidden shadow-lg">
       <CardMedia

@@ -1,4 +1,4 @@
-"use client"; // Đảm bảo component chạy trên Client
+"use client";
 
 import CardItem from "@/small-component/CardItem";
 import { Grid, Typography } from "@mui/material";
@@ -23,20 +23,17 @@ const games = [
 
 const Ourgames = () => {
   const t = useTranslations("our_games");
-
-  // ✅ Dùng useState để lưu trạng thái màn hình
   const [isMobile, setIsMobile] = useState(false);
 
-  // ✅ Dùng useEffect để kiểm tra kích thước màn hình (chỉ chạy trên Client)
   useEffect(() => {
     const checkScreenSize = () => {
       setIsMobile(window.innerWidth < 600);
     };
 
-    checkScreenSize(); // Kiểm tra ngay khi component mount
-    window.addEventListener("resize", checkScreenSize); // Lắng nghe sự thay đổi kích thước
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
 
-    return () => window.removeEventListener("resize", checkScreenSize); // Cleanup event listener
+    return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
 
   return (
