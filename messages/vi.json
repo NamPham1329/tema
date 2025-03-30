@@ -4,34 +4,35 @@
         "games": "Trò Chơi",
         "partner": "Đối Tác",
         "contact_us": "Liên Hệ",
-        "we_getting_ready": "Chúng tôi đang chuẩn bị",
+        "we_getting_ready": "Trò chơi sắp ra mắt",
         "days": "Ngày",
         "hours": "Giờ",
         "minutes": "Phút",
         "seconds": "Giây",
         "we_will_back": "Chúng tôi sẽ quay lại với điều gì đó tuyệt vời. Nhận các cập nhật mới nhất về trò chơi của chúng tôi. Vui lòng đăng ký nhận bản tin của chúng tôi.",
-        "enter_email": "Nhập email của bạn",
+        "enter_email": "Email",
         "address": "Địa Chỉ",
-        "subscribe": "Đăng Ký",
-        "subscribe_des": "Đăng ký nhận bản tin của chúng tôi để là người đầu tiên biết về các cập nhật mới nhất"
+        "detail_address": "Số 20 đường Phan Đăng Lưu, quận Hải Châu, thành phố Đà Nẵng, Việt Nam",
+        "subscribe": "Theo dõi",
+        "subscribe_des": "Đăng ký nhận bản tin của chúng tôi và là người đầu tiên biết về các cập nhật của chúng tôi"
     },
     "about_us": {
         "title": "Về Chúng Tôi",
-        "description": "Duyệt qua bộ sưu tập trò chơi trực tuyến miễn phí của chúng tôi và tận hưởng thời gian tuyệt vời mà không cần rời khỏi trang web! Tùy chọn Trò Chơi Trẻ Em của chúng tôi cũng bao gồm các bài đánh giá trò chơi, mẹo chơi chi tiết, hướng dẫn, và nhiều hơn nữa. Chúng tôi cũng có các tệp tải xuống miễn phí độc quyền, video và bài viết. Etech đánh giá các trò chơi phổ biến nhất dành cho trẻ em từ tất cả các nền tảng chơi game phổ biến, vì vậy bạn không cần tìm kiếm niềm vui ở đâu khác trên Internet. Khám phá một thế giới trò chơi hoàn toàn mới tại Etech.",
-        "users": "Người Dùng",
+        "description": "Duyệt qua tuyển chọn các trò chơi trực tuyến miễn phí của chúng tôi và có một khoảng thời gian tuyệt vời mà không cần rời khỏi trang web! Tùy chọn Trò chơi dành cho Trẻ em của chúng tôi cũng bao gồm các bài đánh giá trò chơi, các trò chơi gian lận và hướng dẫn mở rộng, và nhiều hơn nữa. Chúng tôi cũng có các bản tải xuống, video và bài báo miễn phí độc quyền. Etech đánh giá các trò chơi trẻ em phổ biến nhất từ tất cả các nền tảng trò chơi điện tử phổ biến nhất, vì vậy bạn không cần phải tìm kiếm niềm vui ở bất kỳ nơi nào khác trên Internet. Khám phá một thế giới trò chơi hoàn toàn mới trên Etech.",
+        "users": "Người Chơi",
         "games": "Trò Chơi",
-        "hour": "Giờ",
-        "hour_des": "Truy cập 24/7 giúp đảm bảo hoạt động của doanh nghiệp diễn ra suôn sẻ suốt cả năm.",
+        "hour": "Truy Cập 24/7",
+        "hour_des": "Đảm bảo hoạt động kinh doanh của các nhà khai thác hoạt động trơn tru suốt cả năm.",
         "design": "Thiết Kế",
-        "design_des": "Kết hợp các thế giới tưởng tượng, cơ chế chơi độc đáo và lối chơi chưa từng có, trò chơi của chúng tôi vượt qua giới hạn của thế giới ảo bằng cách mang đến trải nghiệm sáng tạo.",
+        "design_des": "Kết hợp các vũ trụ giàu trí tưởng tượng, động lực chơi và lối chơi chưa từng có, trò chơi của chúng tôi vượt qua ranh giới của thế giới ảo bằng cách tạo ra lối chơi sáng tạo.",
         "team": "Đội Ngũ",
-        "team_des": "Etech là một studio quốc tế từng đoạt giải thưởng, bao gồm các nhà thiết kế, nghệ sĩ, họa sĩ hoạt hình và nhà sản xuất tạo ra nội dung cho các thương hiệu lớn nhất trong lĩnh vực phim và trò chơi điện tử."
+        "team_des": "Etech là một studio quốc tế, từng đoạt giải thưởng gồm các nhà thiết kế, nghệ sĩ, họa sĩ hoạt hình và nhà sản xuất chuyên tạo ra nội dung cho những tên tuổi lớn nhất trong lĩnh vực điện ảnh và trò chơi điện tử."
     },
     "our_games": {
-        "title": "Trò Chơi Của Chúng Tôi",
-        "our_games_des": "Là người tiên phong trong việc trò chơi hóa ứng dụng di động, chúng tôi tự hào về tính độc đáo và cá tính, cung cấp cho người chơi toàn cầu những trò chơi hiện đại với cốt truyện hấp dẫn, hiệu ứng âm thanh sống động và hình ảnh tuyệt đẹp không ngừng gây ấn tượng."
+        "title": "Trò Chơi",
+        "our_games_des": "Là nhà tiên phong trong lĩnh vực trò chơi ứng dụng dành cho thiết bị di động, chúng tôi tự hào về tính độc đáo và cá tính, cung cấp cho người chơi toàn cầu những trò chơi hiện đại có cốt truyện tuyệt vời, hiệu ứng âm thanh giật gân và hoạt ảnh hoành tráng không ngừng gây ấn tượng."
     },
     "partners": {
-        "title": "Đối Tác Của Chúng Tôi"
+        "title": "Đối Tác"
     }
 }
