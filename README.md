@@ -40,7 +40,7 @@ https://tematest.vercel.app/home
 
 # Images
 1. Desktop
-    ![image](https://github.com/user-attachments/assets/e0cc7232-0d75-467e-baf3-d05567d34ad1)
+    ![image](https://github.com/user-attachments/assets/8aae1162-eb22-44e2-9d18-19f5ee47c81e)
 2. Mobile
    ![image](https://github.com/user-attachments/assets/337f522e-099c-4d77-a1c9-d8d5d5c52506)
 3. Menu Mobile
