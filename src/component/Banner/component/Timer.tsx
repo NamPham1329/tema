@@ -1,6 +1,7 @@
 import { Grid, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { TimeStyled } from "../styles";
+import { useTranslations } from "next-intl";
 
 interface TimerProps {
   duration: number;
@@ -8,7 +9,7 @@ interface TimerProps {
 
 const Timer = ({ duration }: TimerProps) => {
   const [time, setTime] = useState(duration);
-
+  const t = useTranslations()
   useEffect(() => {
     setTimeout(() => {
       setTime(time - 1000);
@@ -31,28 +32,28 @@ const Timer = ({ duration }: TimerProps) => {
           <Grid className={`text-center`}>
             <div className="time">{`${days}`}</div>
             <div>
-              <Typography className="title">Days</Typography>
+              <Typography className="title">{t('common.days')}</Typography>
             </div>
           </Grid>
           <Typography className="time">:</Typography>
           <Grid className={`text-center`}>
             <div className="time">{`${hours}`}</div>
             <div>
-              <Typography className="title">Hours</Typography>
+              <Typography className="title">{t('common.hours')}</Typography>
             </div>
           </Grid>
           <Typography className="time">:</Typography>
           <Grid className={`text-center`}>
             <div className="time">{`${minutes}`}</div>
             <div>
-              <Typography className="title">Minutes</Typography>
+              <Typography className="title">{t('common.minutes')}</Typography>
             </div>
           </Grid>
           <Typography className="time">:</Typography>
           <Grid className={`text-center`}>
             <div className="time">{`${seconds}`}</div>
             <div>
-              <Typography className="title">Second</Typography>
+              <Typography className="title">{t('common.seconds')}</Typography>
             </div>
           </Grid>
         </Grid>
