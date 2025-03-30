@@ -16,7 +16,7 @@ const Banner = () => {
         <Typography variant="h3" className="banner_title">
           {t("common.we_getting_ready")}
         </Typography>
-        <div>
+        <div className="bottom">
           <Timer duration={30 * 24 * 60 * 60 * 1000} />
           <div className="send_mail">
             <Typography

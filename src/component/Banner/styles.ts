@@ -103,7 +103,7 @@ export const BannerStyled = styled.div`
 
 export const TimeStyled = styled.div`
     background-color: white;
-    width: 38%;
+    width: 100%;
     margin: auto;
     color: black;
     border-radius: 12px;

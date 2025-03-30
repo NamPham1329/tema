@@ -24,7 +24,6 @@ export default async function RootLayout({
       <body className={`${inter.className} w-screen h-screen bg-white`}>
         <NextIntlClientProvider>
           <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
-          {/* {children} */}
         </NextIntlClientProvider>
       </body>
     </html>

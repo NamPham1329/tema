@@ -20,12 +20,17 @@ import styled from "styled-components";
 import { useTranslations } from "next-intl";
 
 const MenuMobileStyled = styled(Box)`
-  padding-top: 1rem;
   height: 0;
+  padding-top: 0;
   overflow: hidden;
-  transition: height 1s ease-in-out;
+  z-index: 0;
+  transition: height 0.5s ease-in-out, padding-top 0.5s ease-in-out, z-index 0.5s ease-in-out;
+  height: 0;
+
   &.open {
     height: 100vh;
+    padding-top: 1rem;
+    z-index: 999;
   }
   & .language {
     background-color: #f6f6f6;
@@ -62,11 +67,14 @@ const MobileHeader = ({ scrolled }: MobileHeaderProps) => {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
-    <AppBar position="static" sx={{
+    <AppBar
+      position="static"
+      sx={{
         backgroundColor: scrolled ? "bg-sky-500/100" : "transparent",
-        position: 'absolute',
+        position: "absolute",
         top: 0,
-    }}>
+      }}
+    >
       <MenuMobileStyled
         sx={{
           width: "100vw",
@@ -74,10 +82,9 @@ const MobileHeader = ({ scrolled }: MobileHeaderProps) => {
           position: "absolute",
           top: 0,
           background: "white",
-          zIndex: openMenu ? "999" : '0',
           px: 2,
           color: "black",
-          marginTop: openMenu ? '0' : '-100px'
+          // paddingTop: openMenu ? '1rem' : 0,
         }}
         className={openMenu ? "open" : ""}
       >

@@ -1,58 +1,56 @@
 import React from "react";
-import { TextField, InputAdornment, IconButton } from "@mui/material";
+import { TextField, InputAdornment, IconButton, TextFieldProps } from "@mui/material";
 import { styled } from "styled-components";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
-const CustomInput = styled(TextField)`
+type CustomInputProps = TextFieldProps & {
+  variantType?: "filled" | "outlined";
+};
+
+const CustomInput = styled(TextField)<{ $variantType?: "filled" | "outlined" }>`
   & .MuiOutlinedInput-root {
     border-radius: 8px;
-    border: ${(props) =>
-      props.variant === "outlined" ? "1px solid white" : "none"};
-    background: ${(props) =>
-      props.variant === "filled" ? "white" : "transparent"};
+    border: ${({ $variantType }) => ($variantType === "outlined" ? "1px solid white" : "none")};
+    background: ${({ $variantType }) => ($variantType === "filled" ? "white" : "transparent")};
 
-    "&:hover fieldset": {
-      borderColor: "transparent",
-    },
+    &:hover fieldset {
+      border-color: transparent;
+    }
 
-    "&.Mui-focused fieldset": {
-      borderColor: "transparent",
-    },
+    &.Mui-focused fieldset {
+      border-color: transparent;
+    }
+  }
 
   & .MuiInputBase-input {
-    color: ${(props) => (props.variant === "filled" ? "black" : "white")};
+    color: ${({ $variantType }) => ($variantType === "filled" ? "black" : "white")};
     &::placeholder {
-      color: ${(props) =>
-        props.variant === "filled" ? "#999" : "rgba(255, 255, 255, 0.6)"};
+      color: ${({ $variantType }) => ($variantType === "filled" ? "#999" : "rgba(255, 255, 255, 0.6)")};
     }
-    &::placeholder {
-        font-family: Montserrat;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 140%;
-        letter-spacing: 0px;
-        color: ${(props) => (props.variant === "filled" ? "black" : "white")};
-    }
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: 0px;
   }
 
   & svg {
-        color: black;
+    color: black;
   }
 `;
 
-const InputComponent = ({ variant = "filled" }: { variant?: "filled" | "outlined" }) => {
+const InputComponent: React.FC<CustomInputProps> = ({ variantType = "filled", ...props }) => {
   return (
     <CustomInput
+      {...props}
+      $variantType={variantType}
       fullWidth
       placeholder="Enter your email"
-      variant={variant}
       InputProps={{
         endAdornment: (
           <InputAdornment position="end">
             <IconButton>
-              <ArrowForwardIcon
-                style={{ color: variant === "filled" ? "black" : "white" }}
-              />
+              <ArrowForwardIcon style={{ color: variantType === "filled" ? "black" : "white" }} />
             </IconButton>
           </InputAdornment>
         ),

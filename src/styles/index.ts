@@ -4,7 +4,6 @@ import styled from "styled-components";
 
 export const StyledBanner = styled.div`
     width: 100%;
-
     background-image: url("/images/BG.svg");
     background-size: cover;
     background-position: center;
@@ -13,6 +12,17 @@ export const StyledBanner = styled.div`
         margin-top: 310px;
         margin-bottom: 200px;
         position: relative;
+        & .bottom {
+            width: 45%;
+            padding: 4%;
+            padding-top: 0;
+            border-radius: 30%;
+            margin: auto;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(10px);
+            position: relative;
+            z-index: 1;
+        }
         & .banner_title {
             letter-spacing: 0em;
             font-size: 80px;
@@ -30,7 +40,7 @@ export const StyledBanner = styled.div`
     }
      & .send_mail {
             text-align: center;
-            width: 24%;
+            width: 65%;
             margin: auto;
             margin-top: 97px;
             margin-bottom: 32px;
@@ -50,8 +60,15 @@ export const StyledBanner = styled.div`
     @media only screen and (max-width: 425px) {
         & .banner {
            margin-top: 100px;
-           padding: 1rem;
+           padding: 0;
            margin-bottom: 79px;
+           & .bottom {
+            width: 100%;
+            padding: 4rem 1rem;
+            border-radius: 30%;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
            & .image {
                 width: 92% !important;
                 bottom: -290px !important;
@@ -81,6 +98,9 @@ export const StyledBanner = styled.div`
                 margin: auto;
                 margin-top: 40px;
                 margin-bottom: 0px;
+                & > p {
+                    margin-bottom: 1rem;
+                }
                 & .decscription {
                     font-family: Montserrat;
                     font-weight: 400;

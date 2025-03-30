@@ -67,7 +67,7 @@ const Footer = () => {
                 updates
               </Typography>
             </div>
-            <InputV2 variant={"outlined"} />
+            <InputV2 variantType={"outlined"} />
           </Grid>
         </Grid>
       </div>
