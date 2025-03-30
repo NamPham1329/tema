@@ -36,12 +36,10 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
 # Images
-![screencapture-tematest-vercel-app-home-2025-03-30-15_16_40](https://github.com/user-attachments/assets/29dda8b7-2983-4894-bf27-5a530c3e564f)
+1. Desktop
+    ![image](https://github.com/user-attachments/assets/e0cc7232-0d75-467e-baf3-d05567d34ad1)
+2. Mobile
+   ![image](https://github.com/user-attachments/assets/337f522e-099c-4d77-a1c9-d8d5d5c52506)
+3. Menu Mobile
+   ![image](https://github.com/user-attachments/assets/7a7b1451-dd95-4997-be22-33875757c8fd)
 
-![screencapture-tematest-vercel-app-home-2025-03-30-15_16_24](https://github.com/user-attachments/assets/9454cb27-c858-4164-ab06-001d286fec38)
-
-![screencapture-tematest-vercel-app-home-2025-03-30-15_16_08](https://github.com/user-attachments/assets/a7f2c4a7-9434-49d5-839e-d961f5bc2f7b)
-
-![screencapture-tematest-vercel-app-home-2025-03-30-15_15_45](https://github.com/user-attachments/assets/d436d466-b3ad-4cf4-930f-7016a77b9950)
-
-![screencapture-tematest-vercel-app-home-2025-03-30-15_15_20](https://github.com/user-attachments/assets/b684f07c-aecf-4034-8fae-88f7c5a1355b)
