@@ -51,7 +51,7 @@ const AboutUs = () => {
                 </Grid>
                 <Grid className="service_content" size={10}>
                   <Typography variant="h6" component="h5" mb={1}>
-                    {`24 - ${t("hour")}`}
+                    {`${t("hour")}`}
                   </Typography>
                   <Typography
                     className="description"

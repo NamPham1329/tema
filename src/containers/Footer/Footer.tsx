@@ -9,8 +9,10 @@ import FmdGoodIcon from "@mui/icons-material/FmdGood";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import InputV2 from "@/small-component/InputV2";
 import { Fragment } from "react";
+import { useTranslations } from "next-intl";
 
 const Footer = () => {
+  const t = useTranslations()
   return (
     <Fragment>
       <div className="footer bg-stone-900 h-2/5">
@@ -32,7 +34,7 @@ const Footer = () => {
             </div>
           </Grid>
           <Grid size={{ xs: 12, md: 3.5 }} className={"contact"}>
-            <Typography className="name_section">Address</Typography>
+            <Typography className="name_section">{t('common.address')}</Typography>
             <div className="address">
               <div className="icon">
                 <FmdGoodIcon />
@@ -43,8 +45,7 @@ const Footer = () => {
                   US
                 </Typography>
                 <Typography>
-                  20 Phan Dang Luu street, Hai Chau District, Danang city,
-                  Vietnam
+                  {t('common.detail_address')}
                 </Typography>
               </div>
             </div>
@@ -60,11 +61,10 @@ const Footer = () => {
             </div>
           </Grid>
           <Grid size={{ xs: 12, md: 3.5 }} className={"contact"}>
-            <Typography className="name_section">Subscribe</Typography>
+            <Typography className="name_section">{t('common.subscribe')}</Typography>
             <div className="title">
               <Typography>
-                Subscribe to our newsletter and be the first to know about our
-                updates
+              {t('common.subscribe_des')}
               </Typography>
             </div>
             <InputV2 variantType={"outlined"} />

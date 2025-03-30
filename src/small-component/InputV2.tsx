@@ -2,6 +2,7 @@ import React from "react";
 import { TextField, InputAdornment, IconButton, TextFieldProps } from "@mui/material";
 import { styled } from "styled-components";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { useTranslations } from "next-intl";
 
 type CustomInputProps = TextFieldProps & {
   variantType?: "filled" | "outlined";
@@ -40,12 +41,13 @@ const CustomInput = styled(TextField)<{ $variantType?: "filled" | "outlined" }>`
 `;
 
 const InputComponent: React.FC<CustomInputProps> = ({ variantType = "filled", ...props }) => {
+  const t = useTranslations()
   return (
     <CustomInput
       {...props}
       $variantType={variantType}
       fullWidth
-      placeholder="Enter your email"
+      placeholder={t('common.enter_email')}
       InputProps={{
         endAdornment: (
           <InputAdornment position="end">
