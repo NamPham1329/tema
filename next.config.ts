@@ -7,6 +7,9 @@ const nextConfig: NextConfig = {
   compiler: {
     styledComponents: true,
   },
+  experimental: {
+    optimizeCss: true,
+  },
 };
 
 export default withNextIntl(nextConfig);

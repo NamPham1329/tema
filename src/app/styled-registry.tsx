@@ -1,9 +1,20 @@
 "use client";
 import React, { useState } from "react";
-import { ServerStyleSheet, StyleSheetManager } from "styled-components";
+import { StyleSheetManager, ServerStyleSheet } from "styled-components";
 
 export default function StyledComponentsRegistry({ children }: { children: React.ReactNode }) {
-  const [sheet] = useState(() => new ServerStyleSheet());
+  const [styledComponentsStyleSheet] = useState(() => {
+    if (typeof window === "undefined") {
+      return new ServerStyleSheet();
+    }
+    return null;
+  });
 
-  return <StyleSheetManager sheet={sheet.instance}>{children}</StyleSheetManager>;
+  return styledComponentsStyleSheet ? (
+    <StyleSheetManager sheet={styledComponentsStyleSheet.instance}>
+      {children}
+    </StyleSheetManager>
+  ) : (
+    <>{children}</>
+  );
 }
