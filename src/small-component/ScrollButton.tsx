@@ -16,23 +16,22 @@ const StyledIconScroll = styled(Box)`
       color: #000000;
     }
   }
-`
+`;
+
 export default function ScrollButton() {
-  const [atBottom, setAtBottom] = useState(false);
+  const [showScrollUp, setShowScrollUp] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const isBottom =
-        window.innerHeight + window.scrollY >= document.body.scrollHeight - 10;
-      setAtBottom(isBottom);
+      setShowScrollUp(window.scrollY > 100);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [atBottom]);
+  }, []);
 
   const scrollPage = () => {
-    if (atBottom) {
+    if (showScrollUp) {
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
       window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
@@ -49,7 +48,11 @@ export default function ScrollButton() {
       }}
     >
       <Fab color="primary" onClick={scrollPage}>
-        {atBottom ? <KeyboardArrowUp sx={{ width: '30px' }}/> : <KeyboardArrowDown sx={{ width: '30px' }} />}
+        {showScrollUp ? (
+          <KeyboardArrowUp sx={{ width: "30px" }} />
+        ) : (
+          <KeyboardArrowDown sx={{ width: "30px" }} />
+        )}
       </Fab>
     </StyledIconScroll>
   );
